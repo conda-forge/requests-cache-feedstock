@@ -1,7 +1,7 @@
 About requests-cache
 ====================
 
-Home: https://github.com/reclosedev/requests-cache
+Home: https://github.com/reclosedev/requests-cache/
 
 Package license: BSD 2-Clause
 
