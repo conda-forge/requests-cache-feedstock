@@ -1,7 +1,7 @@
 {%set name = "requests-cache" %}
-{%set version = "0.4.12" %}
+{%set version = "0.4.13" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "efe2319b04b5a89e5c7582630dc47eb206f05d9b20b7a4c64228c39d61339dd3" %}
+{%set hash_val = "fe561ca119879bbcfb51f03a35e35b425e18f338248e59fd5cf2166c77f457a2" %}
 
 package:
   name: {{ name }}
@@ -32,13 +32,13 @@ test:
     - requests_cache.backends.storage
 
 about:
-  home: https://github.com/reclosedev/requests-cache
+  home: https://github.com/reclosedev/requests-cache/
   license: BSD 2-Clause
   license_file: LICENSE
   license_family: BSD
   summary: 'Persistent cache for requests library'
-  dev_url: https://github.com/reclosedev/requests-cache
-  doc_url: http://requests-cache.readthedocs.io/en/latest/
+  dev_url: https://github.com/reclosedev/requests-cache/
+  doc_url: https://requests-cache.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
