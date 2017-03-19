@@ -1,6 +1,6 @@
 {%set name = "requests-cache" %}
 {%set version = "0.4.13" %}
-{%set compress_type = "zip" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
 {%set hash_val = "fe561ca119879bbcfb51f03a35e35b425e18f338248e59fd5cf2166c77f457a2" %}
 {%set build_num = "0" %}
