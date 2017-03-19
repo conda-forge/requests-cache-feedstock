@@ -1,19 +1,21 @@
 {%set name = "requests-cache" %}
 {%set version = "0.4.13" %}
+{%set compress_type = "zip" %}
 {%set hash_type = "sha256" %}
 {%set hash_val = "fe561ca119879bbcfb51f03a35e35b425e18f338248e59fd5cf2166c77f457a2" %}
+{%set build_num = "0" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.zip
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -33,8 +35,8 @@ test:
 
 about:
   home: https://github.com/reclosedev/requests-cache/
-  license: BSD 2-Clause
   license_file: LICENSE
+  license: BSD 2-Clause
   license_family: BSD
   summary: 'Persistent cache for requests library'
   dev_url: https://github.com/reclosedev/requests-cache/
