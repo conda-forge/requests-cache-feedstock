@@ -1,8 +1,8 @@
 {% set name = "requests-cache" %}
-{% set version = "0.4.13" %}
+{% set version = "0.5.0" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "fe561ca119879bbcfb51f03a35e35b425e18f338248e59fd5cf2166c77f457a2" %}
+{% set hash_val = "6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
