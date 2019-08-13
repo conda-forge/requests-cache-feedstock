@@ -1,8 +1,8 @@
 {% set name = "requests-cache" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060" %}
+{% set hash_val = "b423d1eb16e8fbc99e0280e618a2676d33c8aba77652a08b740e97fc9ffc627f" %}
 
 package:
   name: {{ name|lower }}
