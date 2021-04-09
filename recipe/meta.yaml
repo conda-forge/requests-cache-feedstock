@@ -1,8 +1,7 @@
 {% set name = "requests-cache" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060" %}
+{% set hash_val = "ba9b8b7893b15464d2bd35c40098c6f7561d77416068f15932ea9d223e1559ed" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -38,7 +37,7 @@ about:
   license_file: LICENSE
   license: BSD 2-Clause
   license_family: BSD
-  summary: 'Persistent cache for requests library'
+  summary: Persistent cache for requests library
   dev_url: https://github.com/reclosedev/requests-cache/
   doc_url: https://requests-cache.readthedocs.io/en/latest/
 
