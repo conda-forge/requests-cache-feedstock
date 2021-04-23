@@ -1,17 +1,13 @@
 {% set name = "requests-cache" %}
 {% set version = "0.5.0" %}
-{% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060
 
 build:
   noarch: python
@@ -30,6 +26,10 @@ requirements:
     - url-normalize
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - requests_cache
     - requests_cache.backends
