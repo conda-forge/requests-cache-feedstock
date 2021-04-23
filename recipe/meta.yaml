@@ -20,27 +20,28 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
 
   run:
-    - python
-    - requests >=1.1.0
+    - python >=3.6
+    - requests >=2.0
+    - itsdangerous
+    - url-normalize
 
 test:
   imports:
     - requests_cache
     - requests_cache.backends
-    - requests_cache.backends.storage
 
 about:
   home: https://github.com/reclosedev/requests-cache/
   license_file: LICENSE
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_family: BSD
-  summary: 'Persistent cache for requests library'
+  summary: 'A transparent, persistent cache for python requests'
   dev_url: https://github.com/reclosedev/requests-cache/
-  doc_url: https://requests-cache.readthedocs.io/en/latest/
+  doc_url: https://requests-cache.readthedocs.io/
 
 extra:
   recipe-maintainers:
