@@ -1,6 +1,6 @@
 {% set name = "requests-cache" %}
-{% set version = "0.5.2" %}
-{% set hash_val = "813023269686045f8e01e2289cc1e7e9ae5ab22ddd1e2849a9093ab3ab7270eb" %}
+{% set version = "0.6.0" %}
+{% set hash_val = "ba9b8b7893b15464d2bd35c40098c6f7561d77416068f15932ea9d223e1559ed" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +40,7 @@ about:
   license_file: LICENSE
   license: BSD-2-Clause
   license_family: BSD
-  summary: 'A transparent, persistent cache for python requests'
+  summary: A transparent, persistent cache for python requests
   dev_url: https://github.com/reclosedev/requests-cache/
   doc_url: https://requests-cache.readthedocs.io/
 
