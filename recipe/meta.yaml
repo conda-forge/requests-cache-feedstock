@@ -1,5 +1,6 @@
 {% set name = "requests-cache" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.2" %}
+{% set hash_val = "813023269686045f8e01e2289cc1e7e9ae5ab22ddd1e2849a9093ab3ab7270eb" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
