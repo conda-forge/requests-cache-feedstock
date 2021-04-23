@@ -1,47 +1,49 @@
 {% set name = "requests-cache" %}
 {% set version = "0.5.0" %}
-{% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6822f788c5ee248995c4bfbd725de2002ad710182ba26a666e85b64981866060
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
 
   run:
-    - python
-    - requests >=1.1.0
+    - python >=3.6
+    - requests >=2.0
+    - itsdangerous
+    - url-normalize
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - requests_cache
     - requests_cache.backends
-    - requests_cache.backends.storage
 
 about:
   home: https://github.com/reclosedev/requests-cache/
   license_file: LICENSE
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_family: BSD
-  summary: 'Persistent cache for requests library'
+  summary: 'A transparent, persistent cache for python requests'
   dev_url: https://github.com/reclosedev/requests-cache/
-  doc_url: https://requests-cache.readthedocs.io/en/latest/
+  doc_url: https://requests-cache.readthedocs.io/
 
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jwcook
