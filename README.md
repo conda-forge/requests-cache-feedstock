@@ -3,15 +3,15 @@ About requests-cache
 
 Home: https://github.com/reclosedev/requests-cache/
 
-Package license: BSD 2-Clause
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/requests-cache-feedstock/blob/master/LICENSE.txt)
 
-Summary: Persistent cache for requests library
+Summary: A transparent, persistent cache for python requests
 
 Development: https://github.com/reclosedev/requests-cache/
 
-Documentation: https://requests-cache.readthedocs.io/en/latest/
+Documentation: https://requests-cache.readthedocs.io/
 
 Current build status
 ====================
