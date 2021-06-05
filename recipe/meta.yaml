@@ -1,6 +1,6 @@
 {% set name = "requests-cache" %}
-{% set version = "0.6.3" %}
-{% set hash_val = "0b9b5555b3b2ecda74a9aa5abd98174bc7332de2e1d32f9f8f056583b01d6e99" %}
+{% set version = "0.6.4" %}
+{% set hash_val = "dd9120a4ab7b8128cba9b6b120d8b5560d566a3cd0f828cced3d3fd60a42ec40" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
