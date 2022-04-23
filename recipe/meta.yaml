@@ -1,6 +1,6 @@
 {% set name = "requests-cache" %}
-{% set version = "0.9.3" %}
-{% set hash_val = "b32f8afba2439e1b3e12cba511c8f579271eff827f063210d62f9efa5bed6564" %}
+{% set version = "0.9.4" %}
+{% set hash_val = "04bb1212bbefba122080163530555f36e64fcd517ef8f90e289ef76f7ae055da" %}
 
 package:
   name: {{ name|lower }}
