@@ -1,6 +1,6 @@
 {% set name = "requests-cache" %}
-{% set version = "0.9.5" %}
-{% set hash_val = "bd67575f541f9c10f44f8b49d8d449fb55db8af2e27d93c56349f227b78e4b70" %}
+{% set version = "0.9.6" %}
+{% set hash_val = "b1672c99ccce9ee53b49504c9f6a6d6de5cf6a9956bda46cf7dda0a4a5fc1bb5" %}
 
 package:
   name: {{ name|lower }}
@@ -24,9 +24,9 @@ requirements:
   run:
     - python >=3.7
     - appdirs >=1.4.4
-    - attrs <22.0,>=21.2
-    # cattrs 22.1+ depends on exceptiongroup, which doesn't have a stable release on conda-forge
-    - cattrs <22.1,>=1.8.1
+    - attrs >=21.2
+    - cattrs >=1.8.1
+    - exceptiongroup
     - itsdangerous >=2.0
     - pyyaml >=5.4
     - requests >=2.22
@@ -36,9 +36,8 @@ requirements:
 test:
   requires:
     - pip
-  # Disabling check against PyPI dependencies until conda dependencies can be updated to match
-  # commands:
-  #   - pip check
+  commands:
+    - pip check
   imports:
     - requests_cache
     - requests_cache.backends
