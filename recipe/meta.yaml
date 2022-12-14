@@ -1,14 +1,12 @@
-{% set name = "requests-cache" %}
-{% set version = "0.9.6" %}
-{% set hash_val = "b1672c99ccce9ee53b49504c9f6a6d6de5cf6a9956bda46cf7dda0a4a5fc1bb5" %}
+{% set version = "0.9.7" %}
 
 package:
-  name: {{ name|lower }}
+  name: requests-cache
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash_val }}
+  url: https://pypi.org/packages/source/r/requests-cache/requests_cache-{{ version }}.tar.gz
+  sha256: b7c26ea98143bac7058fad6e773d56c3442eabc0da9ea7480af5edfc134ff515
 
 build:
   noarch: python
@@ -25,11 +23,11 @@ requirements:
     - python >=3.7
     - appdirs >=1.4.4
     - attrs >=21.2
-    - cattrs >=1.8.1
-    - exceptiongroup
+    - cattrs >=22.2
     - itsdangerous >=2.0
     - pyyaml >=5.4
     - requests >=2.22
+    - ujson >=4.0
     - url-normalize >=1.4
     - urllib3 >=1.25.5
 
@@ -45,13 +43,12 @@ test:
     - requests_cache.serializers
 
 about:
-  home: https://github.com/requests-cache/requests-cache/
+  home: https://github.com/requests-cache/requests-cache
   license_file: LICENSE
   license: BSD-2-Clause
   license_family: BSD
-  summary: A transparent, persistent cache for python requests
-  dev_url: https://github.com/requests-cache/requests-cache/
-  doc_url: https://requests-cache.readthedocs.io/
+  summary: A transparent persistent cache for the requests library
+  doc_url: https://requests-cache.readthedocs.io
 
 extra:
   recipe-maintainers:
