@@ -1,4 +1,4 @@
-{% set version = "0.9.8" %}
+{% set version = "1.0.0" %}
 
 package:
   name: requests-cache
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/requests-cache/requests_cache-{{ version }}.tar.gz
-  sha256: eaed4eb5fd5c392ba5e7cfa000d4ab96b1d32c1a1620f37aa558c43741ac362b
+  sha256: 162f591ed9ad0ea601cefd898770f499d473cb056466e85494299a1b0ca61cbf
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
 
   run:
     - python >=3.7
-    - appdirs >=1.4.4
     - attrs >=21.2
     - cattrs >=22.2
     - itsdangerous >=2.0
+    - platformdirs >=2.5
     - pyyaml >=5.4
     - requests >=2.22
     - ujson >=4.0
