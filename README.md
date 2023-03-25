@@ -1,11 +1,11 @@
-About requests-cache
-====================
+About requests-cache-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/requests-cache-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/requests-cache/requests-cache
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/requests-cache-feedstock/blob/main/LICENSE.txt)
 
 Summary: A transparent persistent cache for the requests library
 
