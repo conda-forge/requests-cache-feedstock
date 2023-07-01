@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: requests-cache
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/requests-cache/requests_cache-{{ version }}.tar.gz
-  sha256: d42e6c2f11de54e6a134c9a00c5ca2a3c8edde3c3f2bdfd942586fafa8990e14
+  sha256: 41b79166aa8e300cc4de982f7ab7c52af914a785160be1eda25c6e9265969a67
 
 build:
   noarch: python
