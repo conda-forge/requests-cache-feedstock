@@ -10,24 +10,24 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - poetry
     - pip
 
   run:
-    - python >=3.7
+    - python >=3.8
     - attrs >=21.2
     - cattrs >=22.2
     - itsdangerous >=2.0
     - platformdirs >=2.5
-    - pyyaml >=5.4
+    - pyyaml >=6.0.1
     - requests >=2.22
-    - ujson >=4.0
+    - ujson >=5.4
     - url-normalize >=1.4
     - urllib3 >=1.25.5
 
