@@ -10,17 +10,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - poetry
     - pip
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - attrs >=21.2
     - cattrs >=22.2
     - itsdangerous >=2.0
@@ -34,6 +34,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
